@@ -38,7 +38,7 @@ class QuestionGenerationDataset(Dataset):
         self.answer = "answer"
         self.question = "question"
 
-        self.data = pd.read_csv(self.path, nrows = 1000)
+        self.data = pd.read_csv(self.path, nrows=1000)
         self.max_len_input = max_len_inp
         self.max_len_output = max_len_out
         self.tokenizer = tokenizer
@@ -170,8 +170,13 @@ if __name__ == '__main__':
     )
     args = argparse.Namespace(**args_dict)
     model = T5FineTuner(args, t5_model, t5_tokenizer)
-    trainer = pl.Trainer(max_epochs=2)
+    trainer = pl.Trainer(max_epochs=1)
     trainer.fit(model)
     print("Training completed!!!")
-
-    print('SS')
+    print('SRK')
+    print("Saving model")
+    save_path_model = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model'
+    save_path_tokenizer = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model'
+    model.model.save_pretrained(save_path_model)
+    t5_tokenizer.save_pretrained(save_path_tokenizer)
+    print('Model saved')
