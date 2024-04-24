@@ -38,7 +38,7 @@ class QuestionGenerationDataset(Dataset):
         self.answer = "answer"
         self.question = "question"
 
-        self.data = pd.read_csv(self.path, nrows=1000)
+        self.data = pd.read_csv(self.path, nrows=10)
         self.max_len_input = max_len_inp
         self.max_len_output = max_len_out
         self.tokenizer = tokenizer
@@ -97,10 +97,8 @@ class QuestionGenerationDataset(Dataset):
             self.inputs.append(tokenized_inputs)
             self.targets.append(tokenized_targets)
 
-pl.seed_everything(42)
-
-train_dataset = QuestionGenerationDataset(t5_tokenizer,train_file_path)
-validation_dataset = QuestionGenerationDataset(t5_tokenizer,validation_file_path)
+# train_dataset = QuestionGenerationDataset(t5_tokenizer,train_file_path)
+# validation_dataset = QuestionGenerationDataset(t5_tokenizer,validation_file_path)
 
 class T5FineTuner(pl.LightningModule):
     def __init__(self, hparams, t5model, t5tokenizer):
@@ -176,7 +174,7 @@ if __name__ == '__main__':
     print('SRK')
     print("Saving model")
     save_path_model = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model'
-    save_path_tokenizer = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model'
+    save_path_tokenizer = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/tokenizer'
     model.model.save_pretrained(save_path_model)
     t5_tokenizer.save_pretrained(save_path_tokenizer)
     print('Model saved')
