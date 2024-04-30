@@ -156,6 +156,9 @@ class T5FineTuner(pl.LightningModule):
         return optimizer
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Train and save model and tokenizer paths')
+    parser.add_argument('--model_path', type=str, help='Path to save the model')
+    parser.add_argument('--tokenizer_path', type=str, help='Path to save the tokenizer')
     print('Generating Dataset!')
     pl.seed_everything(42)
     train_dataset = QuestionGenerationDataset(t5_tokenizer, train_file_path)
@@ -173,8 +176,8 @@ if __name__ == '__main__':
     print("Training completed!!!")
 
     print("Saving model")
-    save_path_model = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model'
-    save_path_tokenizer = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/tokenizer'
-    model.model.save_pretrained(save_path_model)
-    t5_tokenizer.save_pretrained(save_path_tokenizer)
+    # save_path_model = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model'
+    # save_path_tokenizer = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/tokenizer'
+    model.model.save_pretrained(args.model_path)
+    t5_tokenizer.save_pretrained(args.tokenizer_path)
     print('Model saved')
