@@ -10,4 +10,5 @@
  streamlit run streamlit_app.py -- --model_path /Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model/ --tokenizer_path /Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/tokenizer/
  streamlit run streamlit_app.py -- --model_path path/to/the/model --tokenizer_path path/to/the/tokenizer
 - 2
+- 
 
