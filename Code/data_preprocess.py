@@ -32,7 +32,7 @@ def create_df(dataset, df):
     count_long = 0
     count_short = 0
 
-    for index,val in enumerate(tqdm(dataset)):
+    for index,val in enumerate(dataset):
         passage = val['context']
         question = val['question']
         answer = val['answers']['text'][0]
