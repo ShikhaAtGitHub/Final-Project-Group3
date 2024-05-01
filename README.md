@@ -1,4 +1,5 @@
 # Final-Project-Group3
+##### References: HuggingFace Library, YouTube Video for generating questions.
 
 (Instead of running the T5_train.py file, download model and tokenizer folder and replace with the existing one: https://drive.google.com/drive/folders/17g_i4aZemoDlHzdVGsS-SrlYUr8AcnkX?usp=sharing, https://drive.google.com/drive/folders/18cXGLbLFhK4IUDCutKjFiq18D0kOIw69?usp=sharing)
 - https://drive.google.com/drive/folders/18cXGLbLFhK4IUDCutKjFiq18D0kOIw69?usp=sharing
@@ -29,3 +30,5 @@ If you would like to generate dataset and run the model
 - To run streamlit.py use the below command:
  streamlit run streamlit.py -- --model_path path/to/the/model --tokenizer_path path/to/the/tokenizer
 - Provide any context and answer to it, click 'ENTER' twice, you will see the magic. It will generate the best possible questions.
+
+
