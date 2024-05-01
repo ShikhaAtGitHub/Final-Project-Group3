@@ -53,7 +53,7 @@ def main():
                 num_return_sequences=3
             )
             print(prediction)
-            print('-----------------------------------------------------------------------------------------------')
+            print('-------------------------------------------------------RAN SUCCESSFULLY----------------------------------------')
             for beam_output in prediction:
                 sent = tokenizer.decode(beam_output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
                 st.write(sent)
