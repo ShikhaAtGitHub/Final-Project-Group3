@@ -1,26 +1,13 @@
 import argparse
-import glob
-import os
-import json
-import time
-import logging
-import random
-import re
-from itertools import chain
-from string import punctuation
 import pandas as pd
-import numpy as np
 import copy
-import torch
 from tqdm.notebook import tqdm
 from torch.utils.data import Dataset, DataLoader
-import textwrap
 import pytorch_lightning as pl
 from transformers import (
     AdamW,
     T5ForConditionalGeneration,
-    T5Tokenizer,
-    get_linear_schedule_with_warmup
+    T5Tokenizer
 )
 
 train_file_path = 'squad_t5_train.csv'
