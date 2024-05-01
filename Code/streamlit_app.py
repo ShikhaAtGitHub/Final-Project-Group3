@@ -4,9 +4,6 @@ import requests
 import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 
-# trained_model_path = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/model/'
-# trained_tokenizer = '/Users/shikharaikhare/Documents/Course_work/NLP/NLP_Final_Project/Final-Project-Group3/Code/tokenizer/'
-
 def load_model(trained_model_path, trained_tokenizer):
     model = T5ForConditionalGeneration.from_pretrained(trained_model_path)
     tokenizer = T5Tokenizer.from_pretrained(trained_tokenizer)
