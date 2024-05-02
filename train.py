@@ -44,7 +44,7 @@ class QuestionGenerationDataset(Dataset):
         self.question = "question"
 
         # self.data = pd.read_csv(self.path)
-        self.data = pd.read_csv(self.path, nrows=10)
+        self.data = pd.read_csv(self.path, nrows=50000)
 
         self.max_len_input = max_len_inp
         self.max_len_output = max_len_out
@@ -162,7 +162,7 @@ args = argparse.Namespace(**args_dict)
 
 model = T5FineTuner(args, t5_model, t5_tokenizer)
 
-trainer = pl.Trainer(max_epochs = 1)
+trainer = pl.Trainer(max_epochs = 10)
 
 trainer.fit(model)
 
