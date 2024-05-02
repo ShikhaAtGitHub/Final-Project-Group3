@@ -139,7 +139,7 @@ class T5FineTuner(pl.LightningModule):
         return DataLoader(validation_dataset, batch_size=self.hparams.batch_size, num_workers=4)
 
     def configure_optimizers(self):
-        optimizer = AdamW(self.parameters(), lr=3e-4, eps=1e-8)
+        optimizer = AdamW(self.parameters(), lr=0.0003, eps=0.0000001)
         return optimizer
 
 if __name__ == '__main__':
