@@ -9,7 +9,8 @@ commands = [
     "pip install --quiet transformers==4.28.1",
     "conda install -c conda-forge sentencepiece",
     "pip install torch",
-    "pip install pytorch-lightning"
+    "pip install pytorch-lightning",
+    "pip install gdown"
 ]
 
 # Execute commands
