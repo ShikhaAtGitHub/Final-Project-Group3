@@ -10,7 +10,7 @@ commands = [
     "conda install -c conda-forge sentencepiece",
     "pip install torch",
     "pip install pytorch-lightning",
-    "pip install gdown"
+    "brew install wget"
 ]
 
 # Execute commands
