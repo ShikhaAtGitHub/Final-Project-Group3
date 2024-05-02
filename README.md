@@ -1,5 +1,5 @@
 # Final-Project-Group3
-##### References: HuggingFace Library, YouTube Video for generating questions.
+##### References: HuggingFace Library, Followed YouTube Video for generating questions, ChatGPT
 
 (Instead of running the T5_train.py file, download model and tokenizer folder and replace with the existing one: https://drive.google.com/drive/folders/17g_i4aZemoDlHzdVGsS-SrlYUr8AcnkX?usp=sharing, https://drive.google.com/drive/folders/18cXGLbLFhK4IUDCutKjFiq18D0kOIw69?usp=sharing)
 - https://drive.google.com/drive/folders/18cXGLbLFhK4IUDCutKjFiq18D0kOIw69?usp=sharing
