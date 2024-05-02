@@ -2,7 +2,8 @@
 ##### References: HuggingFace Library, Followed YouTube Video for generating questions, ChatGPT
 
 (Instead of running the T5_train.py file, download model and tokenizer folder and replace with the existing one: https://drive.google.com/drive/folders/17g_i4aZemoDlHzdVGsS-SrlYUr8AcnkX?usp=sharing, https://drive.google.com/drive/folders/18cXGLbLFhK4IUDCutKjFiq18D0kOIw69?usp=sharing)
-- https://drive.google.com/drive/folders/18cXGLbLFhK4IUDCutKjFiq18D0kOIw69?usp=sharing
+- !wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=17g_i4aZemoDlHzdVGsS-SrlYUr8AcnkX' -O 'folder.zip'
+- !wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=18cXGLbLFhK4IUDCutKjFiq18D0kOIw69' -O 'folder.zip'
 - pip install datasets==1.0.2
 - pip install tqdm==4.57.0
 - pip install scikit-learn
