@@ -51,7 +51,11 @@ class QuestionGenerationDataset(Dataset):
         labels = copy.deepcopy(target_ids)
         labels[labels==0] = -100
 
-        return {"source_ids": source_ids, "source_mask": src_mask, "target_ids": target_ids, "target_mask": target_mask, "labels": labels}
+        return {"source_ids": source_ids,
+                "source_mask": src_mask,
+                "target_ids": target_ids,
+                "target_mask": target_mask,
+                "labels": labels}
 
     def _build(self):
         for idx in tqdm(range(len(self.data))):
